@@ -1,7 +1,6 @@
 import TYPESCRIPT from "../assets/Skills/Skills/TypeScript.png";
 import HTML5 from "../assets/Skills/Skills/html-5.svg";
 import CSS from "../assets/Skills/Skills/css-3.svg";
-import NODEJS from "../assets/Skills/Skills/node-js.svg";
 import JAVASCRIPT from "../assets/Skills/Skills/Javascript.webp";
 import DOCKER from "../assets/Skills/Skills/Docker.webp";
 import SOLIDITY from "../assets/Skills/Skills/Solidity.svg";
