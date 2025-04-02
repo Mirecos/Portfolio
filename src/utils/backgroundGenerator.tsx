@@ -34,11 +34,9 @@ export function generateBackgroundArray() {
 
     const backgroundArray = [];
 
-    for(let i = 0; i < 80; i++){
+    for(let i = 0; i < 50; i++){
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         const randomWidth = width[Math.floor(Math.random() * width.length)];
-        const randomTranslateX = Math.floor(Math.random() * (maxTranslateX - minTranslateX + 1)) + minTranslateX;
-        const randomTranslateY = Math.floor(Math.random() * (maxTranslateY - minTranslateY + 1)) + minTranslateY;
         
         const x1 = generateRandomNumberBetween(minTranslateX, maxTranslateX);
         const x2 = generateRandomNumberBetween(minTranslateX, maxTranslateX);
@@ -48,7 +46,9 @@ export function generateBackgroundArray() {
         backgroundArray.push({
             translateX: [x1, x2],
             translateY: [y1, y2],
-            className: `w-${randomWidth} h-${randomWidth} rounded-full ${randomColor} blur-xl absolute`,
+            className: `w-${randomWidth} h-${randomWidth} rounded-full ${randomColor} blur-md absolute z-10`,
+            height: randomWidth,
+            width: randomWidth,
             randomRatioX: Math.random(),
             randomRatioY: Math.random()
         });
