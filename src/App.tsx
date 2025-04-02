@@ -5,6 +5,7 @@ import Avatar from './assets/avatar.png'
 import { Book, Cpu, Database, Github, Linkedin } from 'lucide-react';
 import { Projects } from './data/Projects';
 import { Skills } from './data/Skills';
+import { Experiences } from './data/Experiences';
 function App() {
   const { width, height } = useWindowDimensions();
   const bgArray = generateBackgroundArray();
@@ -154,7 +155,24 @@ function App() {
           >
             <div id='Experiences' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
               <h2 className="text-white text-3xl font-bold mb-6">My Experiences</h2>
-              aaa
+              {
+                Experiences.map((experience, index) => (
+                  <div key={index} className="bg-gray-800/80 p-6 rounded-lg mb-4">
+                    <h3 className="text-white text-xl font-semibold mb-2">{experience.title}</h3>
+                    <p className="text-gray-300">{experience.company}</p>
+                    <p className="text-gray-500">{experience.date}</p>
+                    <p className="text-gray-300 mt-2">{experience.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {experience.skills.map((skill, index) => (
+                        <span key={index} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
+                          <img src={skill.icon} className='w-8 h-8'></img>
+                          {skill.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              }
 
             </div>
           </Parallax>
