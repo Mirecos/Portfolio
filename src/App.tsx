@@ -64,8 +64,22 @@ function App() {
                   <h1 className="text-white text-5xl font-bold mb-4">Recchia Michel</h1>
                   <h2 className="text-gray-300 text-2xl">Full Stack Developer</h2>
                   <div className='flex flex-row gap-16 mt-16 justify-center'>
-                    <Linkedin color='white' size={64} onClick={()=>{window.open('https://www.linkedin.com/in/michel-recchia-2601a5255/')}} />
-                    <Github color='white' size={64} onClick={()=>{window.open('https://github.com/Mirecos')}} />
+                  <Linkedin
+                    color='white'
+                    size={64}
+                    className="hover:bg-blue-500 hover:rounded-md hover:scale-110 transition duration-300"
+                    onClick={() => {
+                      window.open('https://www.linkedin.com/in/michel-recchia-2601a5255/');
+                    }}
+                  />
+                  <Github
+                    color='white'
+                    size={64}
+                    className="hover:bg-gray-500 hover:rounded-md hover:scale-110 transition duration-300"
+                    onClick={() => {
+                      window.open('https://github.com/Mirecos');
+                    }}
+                  />
                   </div>
                 </div>
               </div>
