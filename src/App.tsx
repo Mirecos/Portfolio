@@ -41,11 +41,36 @@ function App() {
 
       <div className='fixed top-10 left-1/2 transform -translate-x-1/2 text-white p-4 bg-gradient-to-r from-[#10100E] to-[#20201d] w-fit max-w-[80%] rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)] z-50'>
         <div className='flex flex-row gap-8'>
-          <a href='#About' >About me</a>
-          <a href='#Skills' >Skills</a>
-          <a href='#Projects' >Projects</a>
-          <a href='#Experiences' >Experiences</a>
-          <a href='#Contact' >Contact</a>
+          <a 
+            href='#About' 
+            className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
+          >
+            About me
+          </a>
+          <a 
+            href='#Skills' 
+            className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
+          >
+            Skills
+          </a>
+          <a 
+            href='#Projects' 
+            className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
+          >
+            Projects
+          </a>
+          <a 
+            href='#Experiences' 
+            className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
+          >
+            Experiences
+          </a>
+          <a 
+            href='#Contact' 
+            className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
+          >
+            Contact
+          </a>
         </div>
       </div>
 
