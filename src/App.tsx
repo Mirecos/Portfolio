@@ -2,7 +2,7 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import useWindowDimensions from './hooks/useWindowDimensions';
 import { generateBackgroundArray } from './utils/backgroundGenerator';
 import Avatar from './assets/avatar.png'
-import { Book, Cpu, Database, Github, Linkedin } from 'lucide-react';
+import { Book, Cpu, Database, Github, Hammer, Linkedin } from 'lucide-react';
 import { Projects } from './data/Projects';
 import { Skills } from './data/Skills';
 import { Experiences } from './data/Experiences';
@@ -108,6 +108,19 @@ function App() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {Skills.Databases.map(skill => (
+                  <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
+                    <img src={skill.icon} className='w-8 h-8'></img>
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+
+              <div className='flex flex-row items-baseline gap-2'>
+                <Hammer color='white' />
+                <h2 className="text-white text-3xl font-bold ">Tools</h2>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {Skills.Tools.map(skill => (
                   <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
                     <img src={skill.icon} className='w-8 h-8'></img>
                     {skill.name}
@@ -237,17 +250,15 @@ function App() {
           </Parallax>
         </div>
 
-        <div className='mt-80 w-full bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 shadow-[0_0_10px_rgba(255,255,255,0.7)]'>
-            <h2 className="text-white text-3xl font-bold mb-6">Thanks for your time !</h2>
+        <div className='mt-80 w-full bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 shadow-[0_0_10px_rgba(255,255,255,0.7)] flex justify-between items-center'>
             <div className="flex flex-wrap gap-3">
-              {['LinkedIn', 'GitHub'].map(skill => (
-                <span key={skill} className="bg-blue-500/20 text-white px-4 py-2 rounded-full">
-                  {skill}
-                </span>
-              ))}
+              <div className='text-white font-bold'>@2025 - RECCHIA Michel - All Rights Reserved</div>
             </div>
-            <div className='text-white'>This site is deployed with Vercel !</div>
-            <div className='text-white'>Made in 2025</div>
+
+            <div className='flex flex-col gap-2 text-right'>
+              <div className='text-white font-bold'>Deployed with Vercel !</div>
+            </div>
+            
 
           </div>
       </div>
