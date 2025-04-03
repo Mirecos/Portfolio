@@ -6,9 +6,18 @@ import { Book, Cpu, Database, Github, Hammer, Linkedin } from 'lucide-react';
 import { Projects } from './data/Projects';
 import { Skills } from './data/Skills';
 import { Experiences } from './data/Experiences';
+import { useState } from 'react';
+
 function App() {
   const { width, height } = useWindowDimensions();
   const bgArray = generateBackgroundArray();
+
+  const [message, setMessage] = useState(''); // State for the contact form message
+  const [subject, setSubject] = useState(''); // State for the email subject
+  const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value); // Update the state with the textarea value
+  };
+  
 
 
   return (
@@ -50,17 +59,19 @@ function App() {
             easing="easeOutQuad"
             className="z-10">
             <div id='About' className='flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]'>
-              <div>
-                <h1 className="text-white text-5xl font-bold mb-4">Recchia Michel</h1>
-                <h2 className="text-gray-300 text-2xl">Full Stack Developer</h2>
-                <div className='flex flex-row gap-16 mt-16 justify-center'>
-                  <Linkedin color='white' size={64} onClick={()=>{window.open('https://www.linkedin.com/in/michel-recchia-2601a5255/')}} />
-                  <Github color='white' size={64} onClick={()=>{window.open('https://github.com/Mirecos')}} />
+              <div className='flex flex-col md:flex-row gap-8'>
+                <div>
+                  <h1 className="text-white text-5xl font-bold mb-4">Recchia Michel</h1>
+                  <h2 className="text-gray-300 text-2xl">Full Stack Developer</h2>
+                  <div className='flex flex-row gap-16 mt-16 justify-center'>
+                    <Linkedin color='white' size={64} onClick={()=>{window.open('https://www.linkedin.com/in/michel-recchia-2601a5255/')}} />
+                    <Github color='white' size={64} onClick={()=>{window.open('https://github.com/Mirecos')}} />
+                  </div>
                 </div>
               </div>
 
               {/* Avatar Circle */}
-              <div className="mt-6 ">
+              <div className="mt-6">
                 <img className='w-64 h-64 rounded-full' alt='avatar' src={Avatar} />
               </div>
             </div>
@@ -201,30 +212,19 @@ function App() {
             <div id="Contact" className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
               <h2 className="text-white text-3xl font-bold mb-6">Contact Me</h2>
               <form className="flex flex-col gap-4">
-                {/* Name Field */}
+                {/* Subject Field */}
                 <div>
-                  <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
+                  <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
                   <input 
                     type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Your Name" 
+                    id="subject" 
+                    name="subject" 
+                    placeholder="Subject" 
+                    value={subject} // Bind the subject state
+                    onChange={(e) => setSubject(e.target.value)} // Update the subject state
                     className="w-full p-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
-
-                {/* Email Field */}
-                <div>
-                  <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Your Email" 
-                    className="w-full p-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-
                 {/* Message Field */}
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
@@ -233,17 +233,20 @@ function App() {
                     name="message" 
                     placeholder="Your Message" 
                     rows={5} 
+                    value={message}
+                    onChange={handleMessageChange}
                     className="w-full p-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
 
                 {/* Submit Button */}
-                <button 
-                  type="submit" 
-                  className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300"
+                <a
+                  href={`mailto:michelrecchia1@gmail.com?subject=${subject}&body=${message}`}
+                  className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 text-center"
                 >
                   Send Message
-                </button>
+                </a>
+
               </form>
             </div>
 
