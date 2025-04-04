@@ -81,7 +81,7 @@ function App() {
             speed={-10}
             easing="easeOutQuad"
             className="z-10">
-            <div id='About' className='flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]'>
+            <div id='About' className='flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 md:p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]'>
               <div className='flex flex-col md:flex-row gap-8'>
                 <div>
                   <h1 className="text-white text-5xl font-bold mb-4">Recchia Michel</h1>
@@ -109,7 +109,7 @@ function App() {
 
               {/* Avatar Circle */}
               <div className="mt-6">
-                <img className='w-64 h-64 rounded-full' alt='avatar' src={Avatar} />
+                <img className='w-48 h-48 md:w-64 md:h-64 rounded-full' alt='avatar' src={Avatar} />
               </div>
             </div>
             
@@ -123,7 +123,7 @@ function App() {
             scale={[0.9, 1.1]}
             className="z-10"
           >
-            <div id='Skills' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)] flex flex-col gap-6">
+            <div id='Skills' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 md:p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)] flex flex-col gap-6">
               <div className='flex flex-row items-baseline gap-2'>
                 <Book color='white' />
                 <h2 className="text-white text-3xl font-bold">Skills</h2>
@@ -185,7 +185,7 @@ function App() {
             scale={[0.9, 1.1]}
             className="z-10"
           >
-            <div id='Experiences' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+            <div id='Experiences' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 md:p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
               <h2 className="text-white text-3xl font-bold mb-6">My Experiences</h2>
               {
                 Experiences.map((experience, index) => (
@@ -216,7 +216,7 @@ function App() {
             scale={[0.9, 1.1]}
             className="z-10"
           >
-            <div id='Projects' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+            <div id='Projects' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 md:p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
               <h2 className="text-white text-3xl font-bold mb-6">My Projects</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -239,8 +239,6 @@ function App() {
           </Parallax>
 
 
-
-
           {/* Contact part */}
           <Parallax 
             translateY={[20, 20]}
@@ -248,7 +246,7 @@ function App() {
             scale={[0.9, 1.1]}
             className="z-10"
           >
-            <div id="Contact" className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+            <div id="Contact" className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-4 md:p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
               <h2 className="text-white text-3xl font-bold mb-6">Contact Me</h2>
               <form className="flex flex-col gap-4">
                 {/* Subject Field */}
@@ -278,7 +276,6 @@ function App() {
                   ></textarea>
                 </div>
 
-                {/* Submit Button */}
                 <a
                   href={`mailto:michelrecchia1@gmail.com?subject=${subject}&body=${message}`}
                   className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 text-center"
