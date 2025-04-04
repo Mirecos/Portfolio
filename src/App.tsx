@@ -189,7 +189,7 @@ function App() {
               <h2 className="text-white text-3xl font-bold mb-6">My Experiences</h2>
               {
                 Experiences.map((experience, index) => (
-                  <div key={index} className="bg-gray-800/80 p-6 rounded-lg mb-4">
+                  <div key={index} className="bg-gray-800/80 p-3 md:p-6 rounded-lg mb-4">
                     <h3 className="text-white text-xl font-semibold mb-2">{experience.title}</h3>
                     <p className="text-gray-300">{experience.company}</p>
                     <p className="text-gray-500">{experience.date}</p>
@@ -222,7 +222,7 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {
                   Projects.map((project, index) => (
-                    <div key={index} className="bg-gray-800/80 p-6 rounded-lg">
+                    <div key={index} className="bg-gray-800/80  p-3 md:p-6 rounded-lg">
                       <img 
                         src={project.image} 
                         alt={project.name} 
