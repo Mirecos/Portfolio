@@ -40,7 +40,7 @@ function App() {
         }
 
       <div className='fixed top-10 left-1/2 transform -translate-x-1/2 text-white p-4 bg-gradient-to-r from-[#10100E] to-[#20201d] w-fit max-w-[80%] rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)] z-50'>
-        <div className='flex flex-row gap-8'>
+        <div className='flex flex-row gap-4 md:gap-8 text-xs md:text-md '>
           <a 
             href='#About' 
             className="text-white hover:text-blue-500 hover:underline hover:scale-110 hover:rotate-1 transition duration-300"
@@ -132,8 +132,8 @@ function App() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {Skills.Skills.map(skill => (
-                  <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
-                    <img src={skill.icon} className='w-8 h-8'></img>
+                  <span key={skill.name} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
+                    <img src={skill.icon} className='w-5 h-5 md:w-8 md:h-8'></img>
                     {skill.name}
                   </span>
                 ))}
@@ -145,8 +145,8 @@ function App() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {Skills.Frameworks.map(skill => (
-                  <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
-                    <img src={skill.icon} className='w-8 h-8'></img>
+                  <span key={skill.name} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
+                    <img src={skill.icon} className='w-5 h-5 md:w-8 md:h-8'></img>
                     {skill.name}
                   </span>
                 ))}
@@ -158,8 +158,8 @@ function App() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {Skills.Databases.map(skill => (
-                  <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
-                    <img src={skill.icon} className='w-8 h-8'></img>
+                  <span key={skill.name} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
+                    <img src={skill.icon} className='w-5 h-5 md:w-8 md:h-8'></img>
                     {skill.name}
                   </span>
                 ))}
@@ -171,8 +171,8 @@ function App() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {Skills.Tools.map(skill => (
-                  <span key={skill.name} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
-                    <img src={skill.icon} className='w-8 h-8'></img>
+                  <span key={skill.name} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
+                    <img src={skill.icon} className='w-5 h-5 md:w-8 md:h-8'></img>
                     {skill.name}
                   </span>
                 ))}
@@ -227,8 +227,8 @@ function App() {
                     <p className="text-gray-300 mt-2">{experience.description}</p>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {experience.skills.map((skill, index) => (
-                        <span key={index} className="bg-blue-500/20 text-white px-4 py-2 rounded-full flex items-center gap-1">
-                          <img src={skill.icon} className='w-8 h-8'></img>
+                        <span key={index} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
+                          <img src={skill.icon} className='w-5 h-5 md:w-8 md:h-8'></img>
                           {skill.name}
                         </span>
                       ))}
