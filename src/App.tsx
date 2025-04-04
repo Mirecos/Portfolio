@@ -74,12 +74,10 @@ function App() {
         </div>
       </div>
 
-        
 
-
-        <div className='flex flex-col justify-center w-3/4 mx-auto gap-60 py-40'>
+        <div className='flex flex-col justify-center w-3/4 mx-auto gap-40 md:gap-60 py-20 md:py-40'>
           <Parallax 
-            translateY={[0, 50]}
+            translateY={[20, 20]}
             speed={-10}
             easing="easeOutQuad"
             className="z-10">
@@ -92,7 +90,7 @@ function App() {
                   <Linkedin
                     color='white'
                     size={64}
-                    className="hover:bg-blue-500 hover:rounded-md hover:scale-110 transition duration-300"
+                    className="hover:bg-[#0A66C2] hover:rounded-md hover:scale-110 transition duration-300"
                     onClick={() => {
                       window.open('https://www.linkedin.com/in/michel-recchia-2601a5255/');
                     }}
@@ -100,7 +98,7 @@ function App() {
                   <Github
                     color='white'
                     size={64}
-                    className="hover:bg-gray-500 hover:rounded-md hover:scale-110 transition duration-300"
+                    className="hover:bg-[#010409] hover:rounded-md hover:scale-110 transition duration-300"
                     onClick={() => {
                       window.open('https://github.com/Mirecos');
                     }}
@@ -180,35 +178,6 @@ function App() {
             </div>
           </Parallax>
 
-          {/* Projects part */}
-          <Parallax 
-            translateY={[20, 20]}
-            speed={-10}
-            scale={[0.9, 1.1]}
-            className="z-10"
-          >
-            <div id='Projects' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
-              <h2 className="text-white text-3xl font-bold mb-6">My Projects</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {
-                  Projects.map((project, index) => (
-                    <div key={index} className="bg-gray-800/80 p-6 rounded-lg">
-                      <img 
-                        src={project.image} 
-                        alt={project.name} 
-                        className="w-full h-48 object-cover rounded-t-lg mb-4"
-                      />
-                      <h3 className="text-white text-xl font-semibold mb-2">{project.name}</h3>
-                      <p className="text-gray-300">{project.description}</p>
-                      <p className="text-gray-500 mt-2">{project.year}</p>
-                    </div>
-                  ))  
-                }
-              </div>
-            </div>
-          </Parallax>
-
           {/* Experiences part */}
           <Parallax 
             translateY={[20, 20]}
@@ -239,6 +208,37 @@ function App() {
 
             </div>
           </Parallax>
+
+          {/* Projects part */}
+          <Parallax 
+            translateY={[20, 20]}
+            speed={-10}
+            scale={[0.9, 1.1]}
+            className="z-10"
+          >
+            <div id='Projects' className="bg-gradient-to-r from-[#10100E] to-[#20201d] p-8 rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)]">
+              <h2 className="text-white text-3xl font-bold mb-6">My Projects</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {
+                  Projects.map((project, index) => (
+                    <div key={index} className="bg-gray-800/80 p-6 rounded-lg">
+                      <img 
+                        src={project.image} 
+                        alt={project.name} 
+                        className="w-full h-48 object-cover rounded-t-lg mb-4"
+                      />
+                      <h3 className="text-white text-xl font-semibold mb-2">{project.name}</h3>
+                      <p className="text-gray-300">{project.description}</p>
+                      <p className="text-gray-500 mt-2">{project.year}</p>
+                    </div>
+                  ))  
+                }
+              </div>
+            </div>
+          </Parallax>
+
+
 
 
           {/* Contact part */}
