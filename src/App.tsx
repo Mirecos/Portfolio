@@ -2,15 +2,34 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import useWindowDimensions from './hooks/useWindowDimensions';
 import { generateBackgroundArray } from './utils/backgroundGenerator';
 import Avatar from './assets/avatar.png'
-import { Book, Cpu, Database, Github, Hammer, Linkedin } from 'lucide-react';
+import { Book, ChevronsDown, Cpu, Database, Github, Hammer, Linkedin } from 'lucide-react';
 import { Projects } from './data/Projects';
 import { Skills } from './data/Skills';
 import { Experiences } from './data/Experiences';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const { width, height } = useWindowDimensions();
   const bgArray = generateBackgroundArray();
+
+
+  const [hasScrolled, setHasScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
 
   const [message, setMessage] = useState(''); // State for the contact form message
   const [subject, setSubject] = useState(''); // State for the email subject
@@ -38,6 +57,10 @@ function App() {
             />
           ))
         }
+
+        <div hidden={hasScrolled} className='invisible md:visible md:fixed animate-bounce bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white flex flex-row gap-2 items-center shadow-[0_0_10px_rgba(255,255,255,0.7)] p-2 rounded-2xl z-50'>
+          <ChevronsDown className='w-10 h-10' color='white' size={64} />
+        </div>
 
       <div className='fixed top-10 left-1/2 transform -translate-x-1/2 text-white p-4 bg-gradient-to-r from-[#10100E] to-[#20201d] w-fit max-w-[80%] rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.7)] z-50'>
         <div className='flex flex-row gap-4 md:gap-8 text-xs md:text-md '>

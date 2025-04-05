@@ -25,7 +25,6 @@ import GIT from "../assets/Skills/Tools/git.png";
 export const Skills = {
     Skills: [
         {name: 'TypeScript', icon: TYPESCRIPT},
-        {name: 'Javascript', icon: JAVASCRIPT},
         {name: 'HTML', icon: HTML5},
         {name: 'CSS', icon: CSS},
         {name: 'SQL', icon: SQL},
