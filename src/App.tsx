@@ -8,9 +8,10 @@ import { Skills } from './data/Skills';
 import { Experiences } from './data/Experiences';
 import { useEffect, useState } from 'react';
 
+const bgArray = generateBackgroundArray();
+
 function App() {
   const { width, height } = useWindowDimensions();
-  const bgArray = generateBackgroundArray();
 
 
   const [hasScrolled, setHasScrolled] = useState(false);
