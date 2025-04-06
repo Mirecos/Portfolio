@@ -12,6 +12,11 @@ export const Experiences = [
         company: "Renault Group",
         date: "2024 - Present",
         description: "Developing and maintaining intern web applications using VueJS.",
+        tasks: [
+            "- Participated in the development of a web application for visualizing Looker platform data",
+            "- Built mutiple application from scratch, while going through the entire development cycle",
+            "- Translates business needs from inside factories to technical solutions",
+        ],
         skills: [
             {name: 'VueJS', icon: VUEJS},
             {name: 'MySQL', icon: MYSQL},
@@ -25,6 +30,10 @@ export const Experiences = [
         company: "UX-Key",
         date: "2023 - 2024",
         description: "Assisted in the development of software solutions and participated codebase refactoring.",
+        tasks: [
+            "- Created complex queries to analyze user experience data over websites",
+            "- Participated in the refactoring of the codebase to improve performance and maintainability",
+        ],
         skills: [
             {name: 'VueJS', icon: VUEJS},
             {name: 'Nuxt', icon: NUXT},

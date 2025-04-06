@@ -217,7 +217,11 @@ function App() {
                     <h3 className="text-white text-xl font-semibold mb-2">{experience.title}</h3>
                     <p className="text-gray-300">{experience.company}</p>
                     <p className="text-gray-500">{experience.date}</p>
-                    <p className="text-gray-300 mt-2">{experience.description}</p>
+                    {
+                      experience.tasks.map((task, index) => (
+                        <p className="text-gray-300 mt-2">{task}</p>
+                      ))
+                    }
                     <div className="flex flex-wrap gap-2 mt-2">
                       {experience.skills.map((skill, index) => (
                         <span key={index} className="bg-blue-500/20 text-white text-sm md:text-md px-4 py-2 rounded-full flex items-center gap-1">
