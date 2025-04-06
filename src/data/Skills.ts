@@ -20,6 +20,8 @@ import LOOKER from "../assets/Skills/Databases/Looker.png";
 import VSCODE from "../assets/Skills/Tools/vscode.png";
 import FIGMA from "../assets/Skills/Tools/figma.png";
 import GIT from "../assets/Skills/Tools/git.png";
+import PORTAINER from "../assets/Skills/Tools/portainer.webp";
+
 
 export const Skills = {
     Skills: [
@@ -49,5 +51,6 @@ export const Skills = {
         {name: 'VSCode', icon: VSCODE},
         {name: 'Git', icon: GIT},
         {name: 'Figma', icon: FIGMA},
+        {name: 'Portainer', icon: PORTAINER},
     ]
 }
