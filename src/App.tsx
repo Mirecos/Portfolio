@@ -218,7 +218,7 @@ function App() {
                     <p className="text-gray-300">{experience.company}</p>
                     <p className="text-gray-500">{experience.date}</p>
                     {
-                      experience.tasks.map((task, index) => (
+                      experience.tasks.map((task) => (
                         <p className="text-gray-300 mt-2">{task}</p>
                       ))
                     }

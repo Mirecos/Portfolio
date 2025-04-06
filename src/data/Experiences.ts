@@ -8,7 +8,7 @@ import NUXT from "../assets/Skills/Frameworks/Nuxt.svg";
 
 export const Experiences = [
     {
-        title: "Full Stack Developer in work-study program",
+        title: "Full Stack Developer in work-study program for 2 years",
         company: "Renault Group",
         date: "2024 - Present",
         description: "Developing and maintaining intern web applications using VueJS.",
@@ -26,7 +26,7 @@ export const Experiences = [
         ],
     },
     {
-        title: "Full Stack Developer in work-study program",
+        title: "Full Stack Developer in work-study program for 1 year",
         company: "UX-Key",
         date: "2023 - 2024",
         description: "Assisted in the development of software solutions and participated codebase refactoring.",
