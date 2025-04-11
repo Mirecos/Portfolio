@@ -1,11 +1,18 @@
 import WebPortfolio from "../assets/Projects/WebPortfolio.png";
 import MRDesign from "../assets/Projects/mr-design.png";
+import ETHDashboard from "../assets/Projects/ETH-Dashboard.png";
 
 
 export const Projects = [
     {
+        "name": "Dune ETH Dashboard",
+        "description": "Dune is a website to analyze multichain data. I created a public dashboard about the Ethereum Token, allowing users to track volumes and biggest trades during last days.",
+        "year": "2025",
+        "image": ETHDashboard
+    },
+    {
         "name": "Web portfolio",
-        "description": "A cool portfolio website to showcase my work. Built with React and Tailwind CSS, it also uses react-scroll-parallax for cool effects. It is deployed through Vercel.",
+        "description": "My website portfolio to showcase my work. Built with React and Tailwind CSS, it also uses react-scroll-parallax for cool effects. It is deployed through Vercel.",
         "year": "2025",
         "image": WebPortfolio
     },
