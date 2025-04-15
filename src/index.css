@@ -1,24 +1,30 @@
 @import "tailwindcss";
 
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #10100E; /* Background of the scrollbar track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #4A90E2; /* Color of the scrollbar thumb */
-    border-radius: 4px; /* Rounded corners for the thumb */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #357ABD; /* Color of the thumb on hover */
-  }
-  
-  /* Scrollbar for Firefox */
-  * {
-    scrollbar-width: thin; /* Makes the scrollbar thinner */
-    scrollbar-color: #4A90E2 #10100E; /* Thumb color and track color */
-  }
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #10100E; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A90E2; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #357ABD; /* Color of the thumb on hover */
+}
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #4A90E2 #10100E; /* Thumb color and track color */
+}
+
+.geist-font {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
